@@ -1,0 +1,128 @@
+.grid {
+    --gap: 1em;
+    --columns: 4;
+    max-width: 60rem;
+    margin: 0 auto;
+    display: column;
+    columns: var(--columns);
+    gap: var(--gap);
+  }
+  
+  .grid > * {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+  }
+  
+  @supports (grid-template-rows: masonry) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      grid-template-rows: masonry;
+      grid-auto-flow: row;
+      align-tracks: stretch;
+    }
+  
+    .grid > * {
+      margin-bottom: 0em;
+    }
+  }
+  
+  .featured {
+    grid-column: span 2;
+  }
+  
+
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+p{
+  font-size: 16.4px;
+  color: #6d6d6d;
+}
+  
+  
+  h1 {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: clamp(2rem, 1rem + 3vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    opacity: 0.2;
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+  .content{
+    border-radius: 4%;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0px 6px 14px -4px rgb(0 0 0 / 20%);
+  }
+  .content::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #6d6d6d;
+    opacity: 0.3;
+    display: none;
+    background-position: bottom center;
+    background-size: cover;
+    z-index: 1;
+  }
+  .content:hover::before{
+    display: block;
+  }
+  .posted_date{
+    font-size: 14px;
+  }
+  .author{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .desc-title{
+    font-size: 12px;
+    font-weight: lighter;
+    color: #000000;
+    margin-top: 0;
+  }
+ .desc-text{
+    color: #000000;
+ }
+ .top-content{
+    padding: 5px 7px;
+ }
+  .content_bottom .pp{
+    border-top: 1px solid #a5a5a5;
+    padding: 5px 7px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  a {
+    color: var(--clr-primary);
+  }
+  
+  img {
+    height: auto;
+    border-top-left-radius: 5%;
+
+    border-top-right-radius: 5%;
+    max-width: 100%;
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 800px) {
+      .grid{
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+      }
+  }

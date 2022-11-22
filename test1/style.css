@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+.wrapper .title{
+    font-size: 31px;
+    color: #a5a5a5;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 4rem;
+}
+.wrapper{
+    margin: 0 5rem;
+    padding: 2rem;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+.active{
+    right: 9%;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear ;
+}
+.wrapper .cards_handler{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    width: 1919px;
+    height: min-content;
+}
+.cards_handler .card .top_elements{
+    display: flex;
+    justify-content: end;
+
+}
+.top_elements .filter_btn{
+    display: inline-block;
+    margin-right: 7px;
+    padding: 3px 14px;
+    background: #fdfafa52;
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+.top_elements .solid-btn{
+    display: inline-block;
+    padding: 3px 14px;
+    background: #ffffff;
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.solid-btn .reserve{
+    font-weight: lighter;
+    opacity: 1;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #a5a5a5;
+    text-decoration: none;
+}
+.filter_btn .offer{
+    font-weight: lighter;
+    opacity: 1;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFFF;
+    text-decoration: none;
+}
+.card1{
+    background:  url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60") 0% 0% no-repeat padding-box;
+}
+.card2{
+    background: url("https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+}
+.card3{
+    background: url("https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+}
+.card4{
+    background: url("https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+}
+.card5{
+    background: url("https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+}
+.card{
+    width: 361px;
+    margin-right: 3rem;
+    background-size: cover;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 364px;
+    padding: 15px;
+}
+.card .bottom_element{
+    color: #fff;
+    position: absolute;
+    bottom: 25px;
+}
+.bottom_element .proprio{
+    font-size: 18px;
+    text-shadow: 0px 5px 10px #00000066 ;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.bottom_element .location {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 9%;
+    right: 15rem;
+}
+.rot_btn_back{
+    transform: rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -webkit-transition-duration: 2s;
+}
+.rot_btn_next{
+    transform: rotate(360deg);
+    animation-duration: 2s;
+    -webkit-transform:rotate(360deg);
+    -webkit-transition-duration: 2s;
+}
+.navigation .next-btn{
+    height: 30px;
+    width: 30px;
+    font-weight: bolder !important;
+    color: #fff;
+    
+}
+@media only screen and (max-width:664px) {
+    .wrapper{
+        padding: 0;
+        margin: 0;
+        width: 500px;
+    }
+    .wrapper .cards_handler{
+        padding-right: 400px;
+        width: 1400px;
+        display: block;
+        position: relative;
+        margin: 0 2rem !important;
+        height: fit-content;
+    }
+    .card_handler .card{
+        min-width: 100%;
+        margin-right: 3rem;
+        padding: 0;
+        display: block;
+    }
+    .active{
+        right: 90%;
+        -webkit-transition: all 2s linear;
+        transition: all 2s linear ;
+    }
+    .navigation{
+        position: absolute;
+        z-index: 10;
+        bottom: 6%;
+        right: 20%;
+    }
+}
