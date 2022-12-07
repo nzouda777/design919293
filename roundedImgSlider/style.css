@@ -8,14 +8,7 @@
         max-width: 1200px;
       }
 
-      /* body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      } */
+      
 
       .swiper {
         width: 100%;
@@ -47,36 +40,37 @@
         height: 100%;
         object-fit: cover;
       }
-      .testimony-handler{
-       padding-left: 48px;
-       padding-right: 48px;
-       width: fit-content;
+
+      .card-handler .card .img-handler{
+        width: 208px;
+        height: 208px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 40px;
       }
-.testimony-handler .iconContainer .icon{
-    font-size: 10rem;
-    color: rgba(194, 191, 191, 0.26);
-}
-.testimony-handler .testimony-text-container {
-    margin-top: -50px;
-}
-.testimony-handler .testimony-text-container .testimony{
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 400;
-    line-height: 1.5;
-}
-.stars-container .stars {
-    color: #FFAF9B;
-    font-size: 26px;
-}
-.author-container .author{
-    font-size: 18px;
-}
-@media only screen and (max-width: 769px){
-    .testimony{
-        font-size: 20px !important;
-    }
-}
+      .card-handler .card{
+        position: absolute;
+      }
+      .card-handler .card .img-handler img{
+        object-fit: cover;
+        background-position: center center;
+      }
+      .card-handler .card .bottom-container{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 42px;
+        background: rgba(0, 0, 0, 0.253) ;
+        bottom: 0;
+      }
+      .card-handler .card .bottom-container .content{
+        bottom: 0;
+        margin-top: 70%;
+        color: #fff;
+      }
+      .stars{
+        font-size: 11px;
+      }
 .swiper-button-prev.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;
