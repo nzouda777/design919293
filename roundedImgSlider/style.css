@@ -1,0 +1,89 @@
+:root {
+    --swiper-theme-color: #000000;
+}
+.wrapper{
+        position: relative;
+        height: 70vh;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      /* body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      } */
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .testimony-handler{
+       padding-left: 48px;
+       padding-right: 48px;
+       width: fit-content;
+      }
+.testimony-handler .iconContainer .icon{
+    font-size: 10rem;
+    color: rgba(194, 191, 191, 0.26);
+}
+.testimony-handler .testimony-text-container {
+    margin-top: -50px;
+}
+.testimony-handler .testimony-text-container .testimony{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.stars-container .stars {
+    color: #FFAF9B;
+    font-size: 26px;
+}
+.author-container .author{
+    font-size: 18px;
+}
+@media only screen and (max-width: 769px){
+    .testimony{
+        font-size: 20px !important;
+    }
+}
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0 !important;
+    cursor: auto;
+    pointer-events: none;
+}
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+    cursor: auto;
+    pointer-events: none;
+}

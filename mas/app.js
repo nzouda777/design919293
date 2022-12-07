@@ -11,7 +11,7 @@ console.log(cards)
 modal.forEach(el => {
     cards.forEach(card => {
         card.addEventListener('click', ()=>{
-        el.style.display = "block !important"
+        el.style.display = "block"
         console.log(card)
     })
     });
