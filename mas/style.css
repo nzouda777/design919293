@@ -144,15 +144,25 @@
 }
 @media screen and (max-width: 700px) {
   .grid{
+    max-width: 95%;
       --columns: 2
   }
 }
 @media screen and (max-width: 500px) {
   .grid{
-      --columns: 1
+      --columns: 2
   }
 }
-
+.desc .stars{
+  font-size: 14px;
+  color: #FFAF9B;
+}
+.desc .stars svg:first-child{
+  margin-left: 0px;
+}
+.desc .stars svg{
+  margin-left: -6px;
+}
 .modal {
   display: none;
   position: fixed;

@@ -40,7 +40,9 @@
         height: 100%;
         object-fit: cover;
       }
-
+      .card-handler{
+        width: 100%;
+      }
       .card-handler .card .img-handler{
         width: 208px;
         height: 208px;
@@ -68,6 +70,10 @@
         margin-top: 70%;
         color: #fff;
       }
+      .content .name{
+        font-weight: 500;
+        font-size: 18px;
+      }
       .stars{
         font-size: 11px;
       }
@@ -75,6 +81,17 @@
     opacity: 0 !important;
     cursor: auto;
     pointer-events: none;
+}
+:is(.swiper-button-next, .swiper-button-prev){
+    margin-top: 64px;
+    position: absolute;
+    z-index: 9 !important;
+    background: #fff;
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+    box-shadow: 4px 2px 7px 1px rgb(0 0 0 / 20% )
+
 }
 .swiper-button-next.swiper-button-disabled {
     opacity: 0 !important;
