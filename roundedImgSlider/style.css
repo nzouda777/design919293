@@ -4,7 +4,7 @@
 .wrapper{
         position: relative;
         height: 70vh;
-        min-width: 1200px;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -34,11 +34,11 @@
         -webkit-align-items: center;
         align-items: center;
       }
-      @media only screen and (max-width: 769px){
+      /* @media only screen and (max-width: 769px){
         .swiper-slide{
             max-width: 25%;
         }
-      }
+      } */
       .swiper-slide img {
         display: block;
         width: 100%;
