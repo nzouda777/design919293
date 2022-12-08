@@ -1,22 +1,13 @@
-const modal = document.querySelectorAll("#modal")
-let cards = document.querySelectorAll(".card-img")
-console.log(cards)
-// cards.onclick = function() {
-//     console.log("me")
-// }
-// cards.addEventListener('click', () => {
-//     console.log("clicked")
-// })
 
-modal.forEach(el => {
-    cards.forEach(card => {
-        card.addEventListener('click', ()=>{
-        el.style.display = "block"
-        console.log(card)
-    })
-    });
-    
-    // card.addEventListener('click', () => {
-    //     el.style.display = "block"
-    // })
+
+let card = $(".card-img")
+console.log(card)
+let modal = $("#modal")
+console.log(modal)
+card.click(() => {
+    modal.css({"display": "block"})
+})
+
+$(".closeModal").click(() => {
+    modal.css({"display": "none"})
 })
