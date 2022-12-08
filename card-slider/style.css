@@ -1,0 +1,120 @@
+:root {
+    --swiper-theme-color: #000000;
+}
+.wrapper{
+        position: relative;
+        height: 70vh;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      /* @media only screen and (max-width: 769px){
+        .swiper-slide{
+            max-width: 25%;
+        }
+      } */
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-handler{
+        display: flex;
+        justify-content: center;
+        border-radius: 40px;
+        width: 100%;
+      }
+      .card-handler .card .img-handler{
+        height: 300px;
+        
+      }
+      .card-handler .card{
+        overflow: hidden;
+        height: 100%;
+        width: 300px;
+        box-shadow: 2px 4px 7px rgb(0 0 0 / 20% );
+        border-radius: 40px;
+      }
+      .card-handler .card .img-handler img{
+        height: 100%;
+      }
+      .card-handler .card .bottom-container{
+        height: 200px;
+       position: relative;
+       background: #fff;
+      }
+      .card-handler .card .bottom-container .content{
+        
+      }
+      .content .name{
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .stars{
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        border-radius: 50px;
+        top: -1.3rem;
+        margin: 0 auto;
+        width: 60%;
+        background: rgb(255, 255, 255);
+        box-shadow: 3px 2px 4px rgb(0 0 0 / 20% );
+        padding: 1rem .5rem;
+        font-size: 11px;
+      }
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0 !important;
+    cursor: auto;
+    pointer-events: none;
+}
+:is(.swiper-button-next, .swiper-button-prev){
+    margin-top: 64px;
+    font-size: 32px;
+    position: absolute;
+    z-index: 9 !important;
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    box-shadow: 4px 2px 7px 1px rgb(0 0 0 / 20% )
+
+}
+:is(.swiper-button-next, .swiper-button-prev)::after{
+    
+    font-size: 32px;
+
+}
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+    cursor: auto;
+    pointer-events: none;
+}
