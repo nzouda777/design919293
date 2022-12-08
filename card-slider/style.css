@@ -71,25 +71,32 @@
        background: #fff;
       }
       .card-handler .card .bottom-container .content{
-        
+        position: relative;
+        padding: 0 1rem;
       }
-      .content .name{
-        font-weight: 500;
+      .content .testimony{
         font-size: 18px;
       }
+      .content .name{
+        position: relative;
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 24px;
+      }
       .stars{
+        font-size: 22px;
         position: absolute;
         z-index: 2;
         left: 0;
         right: 0;
-        border-radius: 50px;
-        top: -1.3rem;
+        border-radius: 16px;
+        top: -4rem;
         margin: 0 auto;
         width: 60%;
+        color: #ffaf9b;
         background: rgb(255, 255, 255);
         box-shadow: 3px 2px 4px rgb(0 0 0 / 20% );
-        padding: 1rem .5rem;
-        font-size: 11px;
+        padding: .7rem .5rem;
       }
 .swiper-button-prev.swiper-button-disabled {
     opacity: 0 !important;
@@ -109,8 +116,8 @@
 
 }
 :is(.swiper-button-next, .swiper-button-prev)::after{
-    
-    font-size: 32px;
+    font-weight: bold;
+    font-size: 18px;
 
 }
 .swiper-button-next.swiper-button-disabled {

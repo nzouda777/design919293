@@ -4,7 +4,7 @@
     
       var agSwiper = $('.mySwiper');
     
-      if (agSwiper.length > 1) {
+      if (agSwiper.length > 0) {
     
         var sliderView = 1;
         var ww = $(window).width();
@@ -15,6 +15,10 @@
     
         var swiper = new Swiper('.mySwiper', {
           slidesPerView: sliderView,
+          navigation:{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          },
           spaceBetween: 30,
           loop: true,
           speed: 700,
