@@ -82,6 +82,9 @@
     cursor: auto;
     pointer-events: none;
 }
+:is(.swiper-button-next, .swiper-button-prev){
+    z-index: 8;
+}
 .swiper-button-next.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;

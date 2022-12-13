@@ -3,7 +3,7 @@
   :root { font-family: 'Inter var', sans-serif; }
 }
 
-.grid {
+.masonry .grid {
     --gap: 1em;
     --columns: 6;
     max-width: 80%;
@@ -13,13 +13,13 @@
     gap: var(--gap);
   }
   
-  .grid > * {
+  .masonry .grid > * {
     break-inside: avoid;
     margin-bottom: var(--gap);
   }
   
   @supports (grid-template-rows: masonry) {
-    .grid {
+    .masonry .grid {
       display: grid;
       grid-template-columns: repeat(var(--columns), 1fr);
       grid-template-rows: masonry;
@@ -27,12 +27,12 @@
       align-tracks: stretch;
     }
   
-    .grid > * {
+    .masonry .grid > * {
       margin-bottom: 0em;
     }
   }
   
-  .featured {
+  .masonry .featured {
     grid-column: span 2;
   }
   
@@ -50,7 +50,7 @@
 } */
   
   
-  h1 {
+.masonry h1 {
     margin: 3rem 0;
     text-align: center;
     font-size: clamp(2rem, 1rem + 3vw, 6rem);
@@ -59,18 +59,19 @@
     opacity: 0.2;
   }
   
-  .flow > * + * {
+  .masonry .flow > * + * {
     margin-top: var(--flow-space, var(--spacer));
   }
-  .content{
+  .masonry .content{
     border-radius: 4%;
+    display: none;
     width: fit-content;
     position: relative;
     overflow: hidden;
     cursor: zoom-in;
     box-shadow: 0px 6px 14px -4px rgb(0 0 0 / 20%);
   }
-  .content::before{
+  .masonry .content::before{
     content: "";
     position: absolute;
     height: 100%;
@@ -82,40 +83,40 @@
     background-size: cover;
     z-index: 1;
   }
-  .content:hover::before{
+  .masonry .content:hover::before{
     display: block;
   }
-  .posted_date{
+  .masonry .posted_date{
     font-size: 11px;
     color: #6d6d6d;
   }
-  .author{
+  .masonry .author{
     font-size: 18px;
     font-weight: 500;
   }
-  .pp .desc-title{
+  .masonry .pp .desc-title{
     font-size: 12px;
     color: #333333;
     margin-top: 0;
   }
- .desc-text{
+  .masonry .desc-text{
     color: #333333;
     font-size: 14px;
  }
- .top-content{
+ .masonry .top-content{
     padding: 5px 7px;
  }
-  .content_bottom .pp{
+ .masonry .content_bottom .pp{
     border-top: 1px solid #a5a5a5;
     padding: 5px 7px;
     display: flex;
     justify-content: space-evenly;
   }
-  a {
+  .masonry a {
     color: var(--clr-primary);
   }
   
-  .card-img{
+  .masonry .card-img{
     height: auto;
     border-top-left-radius: 5%;
     object-fit: cover;
@@ -128,54 +129,60 @@
   
   
   @media screen and (max-width: 1500px) {
-      .grid{
+    .masonry .grid{
           --columns: 5
       }
   }
   @media screen and (max-width: 1330px) {
-    .grid{
+    .masonry .grid{
         --columns: 4
     }
 }
 @media screen and (max-width: 1000px) {
-  .grid{
+  .masonry .grid{
       --columns: 3
   }
 }
 @media screen and (max-width: 700px) {
-  .grid{
+  .masonry.grid{
     max-width: 95%;
       --columns: 2
   }
 }
 @media screen and (max-width: 500px) {
-  .grid{
+  .masonry .grid{
       --columns: 2
   }
 }
-.desc .stars{
+@media screen and (max-width: 300px) {
+  .masonry .grid{
+      --columns: 1
+  }
+}
+.masonry .desc .stars{
   font-size: 14px;
   color: #FFAF9B;
 }
-.desc .stars svg:first-child{
+.masonry .desc .stars svg:first-child{
   margin-left: 0px;
 }
-.desc .stars svg{
+.masonry .desc .stars svg{
   margin-left: -6px;
 }
-.modal {
+.masonry .modal {
   display: none;
   position: fixed;
   z-index: 3;
   top: 0;
   bottom: 0;
+  transition: all 2s;
   left: 0;
   cursor: default;
   height: 100%;
   width: 100vw;
   background: rgba(0, 0, 0, 0.664);
 }
-.modal-container{
+.masonry .modal-container{
   margin: 15rem auto;
   height: fit-content;
   max-width: 700px;
@@ -183,7 +190,7 @@
   overflow: hidden;
   background: #fff;
 }
-.modal-container .contain{
+.masonry .modal-container .contain{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(1px, auto);
@@ -194,82 +201,95 @@
   /* background: #efc; */
 }
 @media only screen and (max-width: 769px){
-  .modal-container{
+  .masonry .modal-container{
     width: fit-content;
     margin: 5rem auto;
   }
-  .modal-bottom{
+  .masonry .modal-bottom{
     height: auto !important;
     margin-top: auto;
   }
-  .modal .modal-container .contain{
+  .masonry .modal .modal-container .contain{
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.closeModal{
+.masonry .closeModal{
   position: absolute;
   left: 10px;
   top: 10px;
   color: #fff;
   cursor: pointer;
 }
-.modal-container .contain .img_handler{
+.masonry .modal-container .contain .img_handler{
   
   padding: 0 2rem;
   background: #000000;
   height: 450px;
 }
-.modal-container .contain .img_handler img{
+.masonry .modal-container .contain .img_handler img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.modal-container .contain .text_handler{
+.masonry .modal-container .contain .text_handler{
   
   margin: 15px ;
 }
-.text_handler .user-info{
+.masonry .text_handler .user-info{
   display: flex;
   justify-content: space-between;
 }
-.text_handler .user-info .name{
+.masonry .text_handler .user-info .name{
   text-transform: capitalize;
 }
-.text_handler .user-info .purchase-info{
+.masonry .text_handler .user-info .purchase-info{
   display: flex;
   align-items: center;
   vertical-align: center;
   font-size: 12px;
   color: #6d6d6d;
 }
-.text_handler .user-rating{
+.masonry .text_handler .user-rating{
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
 }
-.text_handler .user-rating .date{
+.masonry .text_handler .user-rating .date{
   font-size: 14px;
   color: #6d6d6d;
 
 }
-.text_handler .user-rating .stars{
+.masonry .text_handler .user-rating .stars{
   font-size: 20px;
   color: #FFAF9B;
 }
-.text_handler .desc-text{
+.masonry .text_handler .desc-text{
   font-size: 16px;
 }
-.modal-bottom{
+.masonry .modal-bottom{
   display: flex;
   flex-direction: column;
   height: 300px;
   justify-content: end;
 }
-.modal-bottom  .content_bottom .pp .desc-title{
+.masonry .modal-bottom  .content_bottom .pp .desc-title{
   font-size: 16px;
   padding: 5px 7px;
   font-weight: 500;
   display: flex;
   align-items: end;
   justify-content: space-between;
+}
+
+.masonry .show-more{
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.masonry .show-more-btn{
+  padding: 5px 16px;
+  border: 1px solid #000000;
+  background: transparent;
+  border-radius: 5px;
 }

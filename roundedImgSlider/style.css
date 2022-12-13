@@ -10,13 +10,13 @@
 
       
 
-      .swiper {
+      .wrapper .swiper {
         width: 100%;
         height: 70%;
       }
       
 
-      .swiper-slide {
+      .wrapper .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -39,32 +39,39 @@
             max-width: 25%;
         }
       } */
-      .swiper-slide img {
+      .wrapper .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      .card-handler{
+      .wrapper .card-handler{
         display: flex;
         justify-content: center;
         width: 100%;
       }
-      .card-handler .card .img-handler{
+      .wrapper .card:hover{
+        transition: all 2s ;
+        background: teal;
+      }
+      .wrapper .card-handler .card .img-handler{
         min-width: 208px;
         height: 208px;
         overflow: hidden;
         position: relative;
         border-radius: 40px;
       }
-      .card-handler .card{
+      .wrapper .card-handler .card{
         position: absolute;
       }
-      .card-handler .card .img-handler img{
+      .wrapper .card:hover{
+        transform: translateY(-20px);
+      }
+      .wrapper .card-handler .card .img-handler img{
         object-fit: cover;
         background-position: center center;
       }
-      .card-handler .card .bottom-container{
+      .wrapper .card-handler .card .bottom-container{
         position: absolute;
         height: 100%;
         width: 100%;
@@ -72,24 +79,24 @@
         background: rgba(0, 0, 0, 0.253) ;
         bottom: 0;
       }
-      .card-handler .card .bottom-container .content{
+      .wrapper .card-handler .card .bottom-container .content{
         bottom: 0;
         margin-top: 70%;
         color: #fff;
       }
-      .content .name{
+      .wrapper .content .name{
         font-weight: 500;
         font-size: 18px;
       }
-      .stars{
+      .wrapper .stars{
         font-size: 11px;
       }
-.swiper-button-prev.swiper-button-disabled {
+      .wrapper .swiper-button-prev.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;
     pointer-events: none;
 }
-:is(.swiper-button-next, .swiper-button-prev){
+.wrapper :is(.swiper-button-next, .swiper-button-prev){
     margin-top: 64px;
     font-size: 32px;
     position: absolute;
@@ -101,13 +108,13 @@
     box-shadow: 4px 2px 7px 1px rgb(0 0 0 / 20% )
 
 }
-:is(.swiper-button-next, .swiper-button-prev)::after{
-    
+.wrapper :is(.swiper-button-next, .swiper-button-prev)::after{
+  
   font-weight: bold;
   font-size: 18px;
 
 }
-.swiper-button-next.swiper-button-disabled {
+.wrapper .swiper-button-next.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;
     pointer-events: none;

@@ -1,22 +1,21 @@
 :root {
     --swiper-theme-color: #000000;
 }
-.wrapper{
+.wrappercard{
         position: relative;
-        height: 70vh;
         max-width: 1200px;
         margin: 0 auto;
       }
 
       
 
-      .swiper {
+      .wrappercard .swiper {
         width: 100%;
         height: 100%;
       }
       
 
-      .swiper-slide {
+      .wrappercard .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -39,51 +38,53 @@
             max-width: 25%;
         }
       } */
-      .swiper-slide img {
+      .wrappercard .swiper-slide img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      .card-handler{
+      .wrappercard .card-handler{
         display: flex;
         justify-content: center;
-        border-radius: 40px;
+        border-radius: 0px;
         width: 100%;
       }
-      .card-handler .card .img-handler{
-        height: 300px;
+      .wrappercard .card-handler .card .img-handler{
+        height: 50%;
+        background: teal;
         
       }
-      .card-handler .card{
+      .wrappercard .card-handler .card{
         overflow: hidden;
-        height: 100%;
+        height: 500px;
         width: 300px;
         box-shadow: 2px 4px 7px rgb(0 0 0 / 20% );
-        border-radius: 40px;
+        border-radius: 20px;
       }
-      .card-handler .card .img-handler img{
+      .wrappercard .card-handler .card .img-handler img{
         height: 100%;
+        object-fit: cover;
       }
-      .card-handler .card .bottom-container{
+      .wrappercard .card-handler .card .bottom-container{
         height: 200px;
        position: relative;
        background: #fff;
       }
-      .card-handler .card .bottom-container .content{
+      .wrappercard .card-handler .card .bottom-container .content{
         position: relative;
         padding: 0 1rem;
       }
-      .content .testimony{
+      .wrappercard .content .testimony{
         font-size: 18px;
       }
-      .content .name{
+      .wrappercard .content .name{
         position: relative;
         margin-top: 40px;
         font-weight: 500;
         font-size: 24px;
       }
-      .stars{
+      .wrappercard .stars{
         font-size: 22px;
         position: absolute;
         z-index: 2;
@@ -98,12 +99,12 @@
         box-shadow: 3px 2px 4px rgb(0 0 0 / 20% );
         padding: .7rem .5rem;
       }
-.swiper-button-prev.swiper-button-disabled {
+      .wrappercard .swiper-button-prev.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;
     pointer-events: none;
 }
-:is(.swiper-button-next, .swiper-button-prev){
+.wrappercard :is(.swiper-button-next, .swiper-button-prev){
     margin-top: 64px;
     font-size: 32px;
     position: absolute;
@@ -115,12 +116,12 @@
     box-shadow: 4px 2px 7px 1px rgb(0 0 0 / 20% )
 
 }
-:is(.swiper-button-next, .swiper-button-prev)::after{
+.wrappercard :is(.swiper-button-next, .swiper-button-prev)::after{
     font-weight: bold;
     font-size: 18px;
 
 }
-.swiper-button-next.swiper-button-disabled {
+.wrappercard .swiper-button-next.swiper-button-disabled {
     opacity: 0 !important;
     cursor: auto;
     pointer-events: none;
