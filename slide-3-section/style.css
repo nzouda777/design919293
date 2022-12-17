@@ -211,6 +211,25 @@
         .right-col-temp .br-slide-card .br-img-handler .br-num-inc{
             right: -5%;
         }
+        .right-col-temp .br-slide-card .br-img-handler .br-img-type{
+            right: 0px;
+        }
+        .right-col-temp .br-slide-card .br-card-img-title{
+            font-size: 2rem;
+            margin-left: 32px;
+        }
+        .right-col-temp .br-slide-card .br-img-handler img{
+            width: 500px;
+            height: 400px;
+        }
+        .right-col-temp .br-slide-card .br-img-handler .br-num-inc{
+            right: 5%;
+            bottom: 15%;
+            font-size: 4rem;
+        }
+        .br-slide-card .br-card-img-desc .br-card-img-title{
+            left: 5%;
+        }
       }
       @media only screen and (max-width: 1080px){
         .brandi-katon-section .jinton-col-temps{
@@ -300,12 +319,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
     .br-nav-navbar .br-notif{
-        background: rgba(255, 217, 0, 0.421);
+        background:#F1FE9A;
         text-align: center;
         padding: 3px 0;
     }
     .br-nav-navbar .br-nav--navbar .br-navbar {
-        background: rgba(167, 1, 167, 0.555);
         display: flex;
         padding: 1rem 1.5rem;
         justify-content: space-between;
@@ -315,21 +333,18 @@
     }
     .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav{
         position: fixed;
-        display: none;
+        transition: all 1s;
         background: rgb(133, 134, 34);
         top: 0;
         left: 0;
-        height: auto;
-        width: 15%;
+        z-index: 3;
+        height: 100%;
+        width: 50%;
     }
     
     .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav .br-mobile-menu--nav{
         list-style-type: none;
         padding: 2rem ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
     }
     .closebtn{
         color: #fff;
@@ -346,7 +361,7 @@
         text-decoration: none;
         color: #000;
         text-transform: capitalize;
-        font-size: 3.5rem;
+        font-size: 114px;
         font-family: 'Rochester', cursive;
     }
     .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav .br-mobile-menu--nav .br-nav-item .br-mobile-link:hover{
@@ -365,7 +380,7 @@
     .br-nav-navbar .br-right-nav--content .br-web-nav--navbar{
         box-shadow: 4px 2px 7px rgb(0 0 0 / 20%);
         background: #fff;
-        padding: 10px 10px;
+        padding: 20px 10px;
         width: auto;
         border-radius: 50px;
     }
@@ -379,12 +394,19 @@
     .br-nav-navbar .br-right-nav--content .br-web-nav--navbar .br-nav--navbar .br-nav .br-nav-linker{
         text-decoration: none;
         color: black;
+        font-size: 13px;
+        transition: all 1s;
         border-radius: 50px;
-        padding: 5px 10px;
+        padding: 10px 10px;
     }
-    
+    .br-nav-navbar .br-right-nav--content .br-web-nav--navbar .br-nav--navbar .br-nav .br-nav-linker:hover{
+        background: #F1FE9A;
+    }
     .br-active-nav-link{
-        background: rgba(255, 217, 0, 0.421);
+        background:#F1FE9A;
+    }
+    .br-active-nav-link:hover{
+        box-shadow: 4px 4px 13px 0px #ccaec3;
     }
     @media only screen and (max-width: 980px){
         .br-right-nav--content{

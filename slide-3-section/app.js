@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 2500000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -18,8 +18,8 @@ var swiper = new Swiper(".mySwiper", {
 
   $(".closebtn").on('click', () => {
 
-    $(".br-mobile-nav").fadeOut("slow")
+    $(".br-mobile-nav").css({"transform": "translateX(-100%)"})
 })
 $("#br-mobile-btn-nav").on('click', () => {
-    $(".br-mobile-nav").css({"display": "block"})
+    $(".br-mobile-nav").css({"transform": "translateX(0%)"})
 })
