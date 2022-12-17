@@ -8,7 +8,7 @@
     --brandi-bg-color: rgba(226, 170, 47, 0.432);
     --lg-section-top-padding: 3rem;
     --swiper-theme-color: rgba(37, 32, 2, 0.815) !important;
-    --lg-font-size: 7rem;
+    --lg-font-size: 5rem;
     --columns: 2;
     --default-text-color: rgba(37, 32, 2, 0.815);
     --default-brandi-font: 'Barlow', sans-serif;
@@ -24,11 +24,15 @@
     color: var(--default-text-color);
 }
 .brandi-katon-section .jinton-col-temps{
+    max-width: 1400px;
+    margin: 1rem auto;
+    padding-left: 20px;
+    padding-right: 20px;
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
 }
 .jinton-col-temps .left-col-temp{
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 .jinton-col-temps .left-col-temp .col-left-title .katon-hero-title{
     text-transform: uppercase;
@@ -74,7 +78,7 @@
     font-weight: bold;
     width: 6%;
 }
-svg {
+.jinton-col-temps .right-col-temp .col-left-title .katon-hero-title .curved1 svg {
     fill: currentColor;
     height: auto;
     max-width: 66vmin;
@@ -127,7 +131,11 @@ svg {
 }
 .right-col-temp .br-slide-card .br-img-handler img{
    width: 500px;
+   border: 1px solid #000;
    height: 400px;
+}
+.br-card-img-desc{
+    margin: 0 3rem;
 }
 .br-card-img-desc .br-card-title{
     margin-bottom: 4rem;
@@ -327,6 +335,10 @@ svg {
         color: #fff;
         margin: .5rem 1rem;
     }
+    /* .br-nav-navbar .br-nav--navbar .br-navbar .br-mobile .br-mobile-content .br-menu-nav{
+        display: block;
+        position: relative;
+    } */
     .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav .br-mobile-menu--nav .br-nav-item{
         display: block;
     }
