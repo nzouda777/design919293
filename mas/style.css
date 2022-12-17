@@ -65,7 +65,7 @@
   .masonry .content{
     border-radius: 4%;
     display: none;
-    width: fit-content;
+    width: 100%;
     position: relative;
     overflow: hidden;
     cursor: zoom-in;
@@ -121,7 +121,7 @@
     border-top-left-radius: 5%;
     object-fit: cover;
     border-top-right-radius: 5%;
-    width: 100%;
+    width: fit-content;
   }
   
   

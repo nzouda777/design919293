@@ -52,14 +52,13 @@
       }
       .wrapper .card:hover{
         transition: all 2s ;
-        background: teal;
       }
       .wrapper .card-handler .card .img-handler{
         min-width: 208px;
         height: 208px;
         overflow: hidden;
         position: relative;
-        border-radius: 40px;
+        border-radius: 70px;
       }
       .wrapper .card-handler .card{
         position: absolute;
@@ -75,7 +74,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        border-radius: 42px;
+        border-radius: 70px;
         background: rgba(0, 0, 0, 0.253) ;
         bottom: 0;
       }
