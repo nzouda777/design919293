@@ -14,6 +14,7 @@
     --default-brandi-font: 'Barlow', sans-serif;
 }
 .brandi-katon-section{
+    border-bottom: 1px solid #000;
     background: var(--brandi-bg-color);
     font-family: var(--default-brandi-font);
     background-position: center;
@@ -25,6 +26,7 @@
 }
 .brandi-katon-section .jinton-col-temps{
     max-width: 1400px;
+    position: relative;
     margin: 1rem auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -65,12 +67,12 @@
 .br-services .br-single-service{
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 13px;
     text-transform: capitalize;
-    margin-top: 12px;
+    margin-bottom: 12px;
 }
 .br-services .br-single-service .enum{
-    margin-left: 12px;
+    margin-left: 13px;
 }
 
 .jinton-col-temps .left-col-temp .br-rotated-text-wrap{
@@ -401,7 +403,7 @@
     .br-nav-navbar .br-right-nav--content .br-web-nav--navbar{
         box-shadow: 4px 2px 7px rgb(0 0 0 / 20%);
         background: #fff;
-        padding: 20px 10px;
+        padding: 15px 10px;
         width: auto;
         border-radius: 50px;
     }
