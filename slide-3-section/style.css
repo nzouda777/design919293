@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --brandi-bg-color: rgba(226, 170, 47, 0.432);
+    --brandi-bg-color: url("https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623ab2fb413c36e14adc46e6_hero-back.png");
     --lg-section-top-padding: 3rem;
     --swiper-theme-color: rgba(37, 32, 2, 0.815) !important;
     --lg-font-size: 5rem;
@@ -276,6 +276,27 @@
             grid-template-columns: repeat(2, 1fr);
         }
       }
+      @media only screen and (max-width: 620px){
+        .right-col-temp .br-slide-card .br-img-handler{
+            margin-top: 2rem;
+        }
+        .right-col-temp .br-slide-card .br-img-handler .br-img-type{
+            right: -1px;
+        }
+        .right-col-temp .br-slide-card .br-card-img-title{
+            font-size: 2rem;
+            margin-left: 32px;
+        }
+        .right-col-temp .br-slide-card .br-img-handler img{
+            width: 330px;
+            height: 350px;
+        }
+        .right-col-temp .br-slide-card .br-img-handler .br-num-inc{
+            right: 3%;
+            bottom: 15%;
+            font-size: 4rem;
+        }
+      }
       @media only screen and (max-width: 479px){
         .right-col-temp .br-slide-card .br-img-handler{
             margin-top: 2rem;
@@ -415,11 +436,10 @@
         }
         .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav{
             position: fixed;
-            display: none;
             background: rgb(133, 134, 34);
             top: 0;
             left: 0;
-            height: auto;
+            height: 100%;
             width: 100%;
         }
     }
