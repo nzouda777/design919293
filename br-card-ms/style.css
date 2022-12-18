@@ -1,20 +1,24 @@
-.grid {
+.br-ms-masonry{
+  display: flex;
+  justify-content: center;
+}
+.br-ms-grid {
     --gap: 1em;
     --columns: 3;
-    max-width: 60rem;
+    max-width: 1400px;
     margin: 0 auto;
     display: column;
     columns: var(--columns);
     gap: var(--gap);
   }
   
-  .grid > * {
+  .br-ms-grid > * {
     break-inside: avoid;
     margin-bottom: var(--gap);
   }
   
   @supports (grid-template-rows: masonry) {
-    .grid {
+    .br-ms-grid {
       display: grid;
       grid-template-columns: repeat(var(--columns), 1fr);
       grid-template-rows: masonry;
@@ -22,7 +26,7 @@
       /* align-tracks: stretch; */
     }
   
-    .grid > * {
+    .br-ms-grid > * {
       margin-bottom: 0em;
     }
   }
@@ -81,4 +85,74 @@
     font-weight: 400;
     letter-spacing: -.03em;
     font-style: italic;
+}
+.br-work-side-text{
+  position: absolute;
+
+  top: 0;
+  right: 1%;
+  bottom: 0;
+  width: 28px;
+  height: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.br-ms-card:hover .br-work-side-text{
+
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.br-marquee-han{
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.br-ms-marquee-text{
+  color: #000;
+  /* position: absolute; */
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  height: 100%;
+  width: 28px;
+  writing-mode: vertical-lr;
+}
+.br-card-link:hover .br-ms-marquee-text{
+  visibility: hidden;
+}
+.br-card-link:hover .br-ms-marquee-text:before{
+  visibility: visible;
+
+  animation: marquee 3s infinite linear ;
+}
+.br-ms-marquee-text::before{
+  content: attr(data-text) "    "  attr(data-text) "    " attr(data-text) "    " attr(data-text) "    " attr(data-text) "    " attr(data-text) "    " attr(data-text)"    " attr(data-text);
+  position: absolute;
+  height: 100%;
+  will-change: transform;
+  white-space: pre;
+  z-index: 2;
+  bottom: 0;
+  visibility: hidden;
+}
+@keyframes marquee {
+  from { transform: translateY(0%); }
+  to { transform: translateY(-50%); }
+}
+
+@media only screen and (max-width: 960px){
+  .br-ms-grid{
+    --columns: 2;
+  }
+}
+@media only screen and (max-width: 760px){
+  .br-ms-grid{
+    --columns: 1;
+  }
 }
