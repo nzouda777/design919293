@@ -1,4 +1,12 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding:  0;
+}
 .br-ms-masonry{
+  background: url("https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623ab2fb413c36e14adc46e6_hero-back.png");
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
