@@ -7,13 +7,17 @@
   background: url("https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623ab2fb413c36e14adc46e6_hero-back.png");
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
 .br-ms-grid {
     --gap: 1em;
+    padding-left: 40px;
+    padding-right: 40px;
     --columns: 3;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     display: column;
     columns: var(--columns);

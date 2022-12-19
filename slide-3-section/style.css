@@ -13,6 +13,7 @@
     --default-text-color: rgba(37, 32, 2, 0.815);
     --default-brandi-font: 'Barlow', sans-serif;
 }
+
 .brandi-katon-section{
     border-bottom: 1px solid #000;
     background: var(--brandi-bg-color);
@@ -372,6 +373,7 @@
     }
     .closebtn{
         color: #fff;
+        position: fixed;
         margin: .5rem 1rem;
     }
     .br-nav-navbar .br-nav--navbar .br-navbar .br-mobile .br-mobile-content .br-menu-nav{
@@ -431,7 +433,14 @@
     .br-active-nav-link:hover{
         box-shadow: 4px 4px 13px 0px #ccaec3;
     }
+    @media only screen and (max-width: 500px){
+        .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav .br-mobile-menu--nav .br-nav-item .br-mobile-link{
+            font-size: 70px;
+        }
+    }
     @media only screen and (max-width: 980px){
+
+    
         .br-right-nav--content{
             display: none;
         }
