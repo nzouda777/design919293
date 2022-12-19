@@ -18,8 +18,8 @@ var swiper = new Swiper(".mySwiper", {
 
   $(".closebtn").on('click', () => {
 
-    $(".br-mobile-nav").css({"transform": "translateX(-100%)"})
+    $(".bs-mobile-nav").css({"transform": "translateX(-100%)"})
 })
-$("#br-mobile-btn-nav").on('click', () => {
-    $(".br-mobile-nav").css({"transform": "translateX(0%)"})
+$("#bs-mobile-btn-nav").on('click', () => {
+    $(".bs-mobile-nav").css({"transform": "translateX(0%)"})
 })

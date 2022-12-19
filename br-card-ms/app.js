@@ -3,7 +3,13 @@
     // $('.br-ms-marquee-text').text(dText)
 
     $(document).on('load',()=>{
-        let dText = $('.br-ms-marquee-text').val()
-        console.log($(".br-ms-marquee-text").length)
-        $('.br-ms-marquee-text').text(dText)
+        let dText = $('.bs-ms-marquee-text').val()
+        $('.bs-ms-marquee-text').text(dText)
+        
     })
+$(window).scroll( () => {
+            $('.bs-left-text-el').css("position", "fixed")
+        })
+$(window).scroll( () => {
+    $('.bs-right-text-el').css("position", "fixed")
+})
