@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bs-grid-img-text{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    height: 80vh;
+    width: 100%;
+    background: #FFB87B;
+}
+
+.bs-grid-img-side{
+    background-image: url("https://www.chloeford.co.uk/wp-content/uploads/2021/01/beauty-design-low-1-scaled.jpg");
+    height: 100%;
+    padding: 2rem 2rem;
+    background-position: center center;
+    background-size: cover;
+}
+.bs-grid-text-side{
+
+    background: #FFB87B;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bs-grid-text-contain .bs-grid-text-light{
+    font-size: 5.5vw;
+    font-family: 'Passions Conflict', cursive;
+    font-style: italic;
+    font-weight: lighter !important;
+}
+.bs-grid-text-contain .bs-grid-text-bold{
+    font-size: 4.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+@media only screen and (max-width: 969px){
+    .bs-grid-img-side{
+        height: 50vh;
+    }
+    .bs-grid-img-text{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

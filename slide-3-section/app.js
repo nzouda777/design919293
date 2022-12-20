@@ -23,12 +23,15 @@ var swiper = new Swiper(".mySwiper", {
 $("#br-mobile-btn-nav").on('click', () => {
     $(".br-mobile-nav").css({ "visibility": "visible","transform": "translateX(0%)"})
 })
-$(window).scroll(() => {
-  let $height = $(window).scrollTop()
-  if ($height > 30) {
-    $(".br-nav-navbar").css({"transition" : "all 20s", "position":"fixed", "width":"100%","z-index":"3", "background": "url('https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623da4c89a3f8d677f827868_header-back.png')"})
+$(document).scroll(() => {
+  let $height = $(document).scrollTop()
+  if ($(this).scrollTop() > 30) {
+    $(".br-nav-navbar").css({"transition" : "all 20s", "position":"fixed","top": "-9%", "width":"100%","z-index":"3", "background": "url('https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623da4c89a3f8d677f827868_header-back.png')"}).fadeIn()
   }else{
     $(".br-nav-navbar").css({"transition" : "all 2s","position":"relative", "width":"100%","z-index":"3", "background": "transparent"})
   }
+  if ($(this).scrollTop() > 30) {
+    $(".br-nav-navbar").css({"transition" : "all 1s", "position":"fixed","top": "0", "width":"100%","z-index":"3", "background": "url('https://global-uploads.webflow.com/600fe7d75184f7b68f55c88e/623da4c89a3f8d677f827868_header-back.png')"}).fadeIn()
+  }
   
-})
+})  
