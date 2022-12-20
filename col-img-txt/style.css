@@ -11,6 +11,9 @@
     width: 100%;
     background: #FFB87B;
 }
+.bs-grid-text-contain{
+    position: relative;
+}
 
 .bs-grid-img-side{
     background-image: url("https://www.chloeford.co.uk/wp-content/uploads/2021/01/beauty-design-low-1-scaled.jpg");
