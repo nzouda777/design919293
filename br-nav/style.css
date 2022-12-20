@@ -23,6 +23,7 @@
 .br-nav-navbar .br-nav--navbar .br-navbar .br-left-nav--content .br-mobile-nav{
     position: fixed;
     display: none;
+    visibility: hidden;
     background: rgb(133, 134, 34);
     top: 0;
     left: 0;

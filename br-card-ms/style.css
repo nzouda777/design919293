@@ -12,10 +12,10 @@
   justify-content: center;
 }
 .bs-left-text-el{
-  position: sticky;
+  position: absolute;
   left: 8.5%;
-  top: 45%;
-  bottom: auto;
+  top: 0;
+  bottom: 0;
   writing-mode: vertical-rl;
 
 }
