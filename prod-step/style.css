@@ -3,7 +3,8 @@
     justify-content: center;
     gap: 18px;
     margin-top: 10%;
-    align-items: center;
+    /* width: 100%; */
+    /* align-items: center; */
 }
 .step{
     display: flex;
@@ -37,7 +38,7 @@
     background: url("https://cdn.julesjenn.com/assets/fourcheb.png") no-repeat 0;
     background-size: contain;
     height: 25%;
-    padding-left: 10px;
+    
     display: flex;
     flex-direction: column;
     gap: 34px;
@@ -53,7 +54,7 @@
     .step:nth-child(4) .plusSvg{
         position: absolute;
         top: 100%;
-        left: 39%;
+        left: 33%;
         transform: rotate(90deg);
     }
     .step:nth-child(4){
@@ -65,44 +66,86 @@
         left: 0;
     }
     .step:last-child .branch {
-        padding-right: 5px;
         background: url("https://cdn.julesjenn.com/assets/fourcheb.png") no-repeat 0;
         background-size: contain;
         height: 55%;
-        position: absolute;
-        padding-left: 10px;
+        /* position: absolute; */
+        
         transform: rotate(90deg);
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        bottom: 10%;
-        left: 34%;
+        bottom: 15%;
+        left: 32%;
     }
     .step:last-child .branch .step-content{
         transform: rotate(-90deg);
         margin-left: 72px;
     }
 }
-@media only screen and (max-width: 560px){
+@media only screen and (max-width: 600px){
     .step:nth-child(4) .plusSvg{
         position: absolute;
         transform: rotate(90deg);
+        bottom: 20%;
+        left: 50%;
+    }
+    
+    .step:nth-child(4){
+        position: absolute;
+        top: 25%;
+        left: 5;
     }
     .step:last-child{
         left: 0;
     }
     .step:last-child .branch {
-        padding-right: 5px;
         background: url("https://cdn.julesjenn.com/assets/fourcheb.png") no-repeat 0;
         background-size: contain;
-        height: 45%;
-        padding-left: 10px;
+        height: 55%;
+        
+        gap: 100px;
         transform: rotate(90deg);
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: column;
+        bottom: 19%;
+        left: 5;
+    }
+    .step:last-child .branch .step-content{
+        transform: rotate(-90deg);
+        /* margin-left: 72px; */
+    }
+}
+
+@media only screen and (min-width: 300px){
+    .step:nth-child(4) .plusSvg{
+        position: absolute;
+        transform: rotate(90deg);
         bottom: 20%;
-        left: 30%;
+        left: 50%;
+    }
+    
+    .step:nth-child(4){
+        position: absolute;
+        top: 30%;
+        left: 39%;
+    }
+    .step:last-child{
+        left: 0;
+    }
+    .step:last-child .branch {
+        background: url("https://cdn.julesjenn.com/assets/fourcheb.png") no-repeat 0;
+        background-size: contain;
+        height: 55%;
+        
+        gap: 100px;
+        transform: rotate(90deg);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        bottom: 10%;
+        left: 25%;
     }
     .step:last-child .branch .step-content{
         transform: rotate(-90deg);
