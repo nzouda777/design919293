@@ -1,14 +1,15 @@
 .bs-prod-step-wrapper{
     display: flex;
-    gap: 34px;
-    margin-top: 64px;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10%;
+    align-items: center;
 }
 .step{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
-    /* max-width: 600px; */
 }
 .step .step-content{
     display: flex;
@@ -37,12 +38,10 @@
     background-size: contain;
     height: 25%;
     padding-left: 10px;
-    /* left: 60%; */
     display: flex;
     flex-direction: column;
     gap: 34px;
     position: absolute;
-    /* bottom: 90px; */
 }
 .step:last-child .branch .step-content{
     margin-left: 32px;
@@ -53,9 +52,14 @@
 @media only screen and (max-width: 860px){
     .step:nth-child(4) .plusSvg{
         position: absolute;
-        top: 25%;
+        top: 100%;
         left: 39%;
         transform: rotate(90deg);
+    }
+    .step:nth-child(4){
+        position: absolute;
+        top: 30%;
+        left: 39%;
     }
     .step:last-child{
         left: 0;
@@ -65,16 +69,14 @@
         background: url("https://cdn.julesjenn.com/assets/fourcheb.png") no-repeat 0;
         background-size: contain;
         height: 55%;
+        position: absolute;
         padding-left: 10px;
         transform: rotate(90deg);
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        /* gap: 2%; */
-        /* position: absolute; */
-        bottom: 30%;
-        /* text-align: center; */
-        left: 30%;
+        bottom: 10%;
+        left: 34%;
     }
     .step:last-child .branch .step-content{
         transform: rotate(-90deg);
@@ -84,8 +86,6 @@
 @media only screen and (max-width: 560px){
     .step:nth-child(4) .plusSvg{
         position: absolute;
-        top: 25%;
-        left: 42%;
         transform: rotate(90deg);
     }
     .step:last-child{
@@ -101,10 +101,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        /* gap: 2%; */
-        /* position: absolute; */
-        bottom: 40%;
-        /* text-align: center; */
+        bottom: 20%;
         left: 30%;
     }
     .step:last-child .branch .step-content{
